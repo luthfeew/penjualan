@@ -42,3 +42,11 @@ Route::get('/create', function () {
 
 // Route dengan aksi controller
 Route::get('/produk', [produkController::class, 'index']);
+
+Route::get('/produk/show', [produkController::class, 'show']);
+
+Route::get('/halaman', function () {
+    $title = 'Harry Pooter';
+    $konten = 'harry potter and the deathly hallows: part 2';
+    return view('halaman', compact('title', 'konten'));
+});
