@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\produkController;
+use App\Http\Controllers\pelangganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +51,5 @@ Route::get('/halaman', function () {
     $konten = 'harry potter and the deathly hallows: part 2';
     return view('halaman', compact('title', 'konten'));
 });
+
+Route::get('/pelanggan', [pelangganController::class, 'index']);
