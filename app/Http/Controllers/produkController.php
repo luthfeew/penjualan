@@ -9,15 +9,15 @@ class produkController extends Controller
 {
     public function index()
     {
-        $produk = DB::table('barangs')
-            ->join('kategoris', 'barangs.id_kategori', '=', 'kategoris.id')
+        $produk = DB::table('produks')
+            ->join('kategoris', 'produks.id_kategori', '=', 'kategoris.id')
             ->get();
         return view('produk/index', compact('produk'));
     }
 
     public function store()
     {
-        DB::table('barangs')
+        DB::table('produks')
             ->insert([
                 'nama' => 'Lampu',
                 'id_kategori' => 1,
@@ -30,7 +30,7 @@ class produkController extends Controller
 
     public function update()
     {
-        DB::table('barangs')->where('id', 3)
+        DB::table('produks')->where('id', 3)
             ->update([
                 'nama' => 'Bola Lampu',
                 'qty' => 20,
@@ -42,7 +42,7 @@ class produkController extends Controller
 
     public function delete()
     {
-        DB::table('barangs')->where('id', 3)->delete();
+        DB::table('produks')->where('id', 3)->delete();
         echo "Data Berhasil Dihapus";
     }
 
