@@ -53,3 +53,7 @@ Route::get('/halaman', function () {
 });
 
 Route::get('/pelanggan', [pelangganController::class, 'index']);
+
+Route::get('/produk/store', [produkController::class, 'store']);
+Route::get('/produk/update', [produkController::class, 'update']);
+Route::get('/produk/delete', [produkController::class, 'delete']);
