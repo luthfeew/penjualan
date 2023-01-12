@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\produkController;
 use App\Http\Controllers\pelangganController;
+use App\Http\Controllers\kategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,8 @@ Route::get('/pelanggan', [pelangganController::class, 'index']);
 Route::get('/produk/store', [produkController::class, 'store']);
 Route::get('/produk/update', [produkController::class, 'update']);
 Route::get('/produk/delete', [produkController::class, 'delete']);
+
+Route::get('/kategori', [kategoriController::class, 'index']);
+Route::get('/kategori/store', [kategoriController::class, 'store']);
+Route::get('/kategori/update', [kategoriController::class, 'update']);
+Route::get('/kategori/delete', [kategoriController::class, 'delete']);
